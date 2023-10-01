@@ -1,0 +1,60 @@
+// let arr = [2,3,4,{name:"Shubham" ,age:23},[23,45,6,7,8,{destination:"Manali",cost:4000,persons:{perso1:"Raman",person2:"Abdhesh",person3:"Aniket"}}]];
+// console.log(arr[4][5].persons.person2);
+// let arr = [2,3,4,5,6,7];
+// arr[1] = 23;
+// console.log(arr);
+
+// let str = "Suman";
+// str[1] = 'k'
+// console.log(str[1]);
+
+let arr = [1,2,3,4,5];
+// let i = 0;
+// let j = arr.length-1;
+// while(i<j){
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     i++;
+//     j--;
+// }
+// console.log(arr);
+// let size = arr.length
+// for(let i=0;i<Math.floor(size/2);i++){
+//     let temp = arr[i];
+//     arr[i] = arr[size-i-1];
+//     arr[size-i-1] = temp;
+// }
+// console.log(arr);
+
+let arr1 = [2,4,6,8,10,12];
+let arr2 = [1,3,5,7,9];
+let resArr = [];
+let size1 = arr1.length;
+let size2 = arr2.length;
+let i = 0;
+let j = 0;
+let k = 0;
+while(i<size1 && j<size2){
+    if(arr1[i]<arr2[j]){
+        resArr[k] = arr1[i];
+        i++;
+        k++;
+    }
+    else{
+        resArr[k] = arr2[j];
+        j++;
+        k++;
+    }
+}
+
+if(i<size1){
+    ++i,++k;
+    resArr[k] = arr1[i];
+    
+}
+else if(j<size2){
+    ++j,++k;
+    resArr[k] = arr2[j];
+}
+console.log(resArr);
